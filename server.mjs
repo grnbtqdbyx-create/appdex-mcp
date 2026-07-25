@@ -46,7 +46,7 @@ const text = (o) => ({ content: [{ type: "text", text: typeof o === "string" ? o
 const fail = (e) => ({ content: [{ type: "text", text: `Hata: ${e.message}` }], isError: true });
 const quotaNote = (q) => (q.limit ? `${q.used}/${q.limit} istek kullanıldı (${q.tier} katman)` : undefined);
 
-const server = new McpServer({ name: "appdex", version: "1.0.0" });
+const server = new McpServer({ name: "appdex", version: "1.0.1" });
 
 // ⭐ ANA TOOL — bir iOS app'in aylık geliri/indirmesi, güven etiketiyle.
 server.registerTool("estimate_app", {
