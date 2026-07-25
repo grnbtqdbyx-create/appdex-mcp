@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.app-dex/appdex",
+  "description": "iOS App Store revenue & download estimates with confidence labels",
+  "version": "1.0.1",
+  "websiteUrl": "https://app-dex.com/mcp",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "appdex-mcp",
+      "version": "1.0.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "APPDEX_API_KEY",
+          "description": "Appdex API key (free tier: 50 requests/day). Get one at https://app-dex.com/account",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "APPDEX_API_URL",
+          "description": "API base URL. Defaults to https://app-dex.com — override only for staging.",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}
